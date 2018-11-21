@@ -40,7 +40,7 @@ class ProviderTests: XCTestCase {
 				XCTAssertEqual(show.name, "Person of Interest")
 				XCTAssertEqual(show.id, 2)
 				XCTAssertEqual(show.episodes.count, 103)
-				XCTAssertEqual(show.characters.count, 6)
+				XCTAssertEqual(show.characters.count, 7)
 				XCTAssertEqual(show.crew.count, 43)
 				expectation.fulfill()
 			} catch {
