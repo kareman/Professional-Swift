@@ -1,7 +1,5 @@
 //: [Previous](@previous)
 
-struct BigType {}
-
 struct CopyOnWriteType {
 	private class Reference {
 		var prop1: Int

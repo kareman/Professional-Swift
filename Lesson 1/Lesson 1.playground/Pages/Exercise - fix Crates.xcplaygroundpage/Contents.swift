@@ -1,17 +1,18 @@
 //: [Previous](@previous)
+
 struct Crate {
-	var width, length, height: Float
+	let id: Int
+	let width, length, height: Float
 	var volume: Float {
 		return width * length * height
 	}
 }
 
+let a = Crate(id: 100, height: 1, side1: 2, side2: 3)
+let b = Crate(id: 101, height: 1, side1: 3, side2: 2)
+let c = Crate(id: 102, height: 2, side1: 3, side2: 2)
 
-let a = Crate(width: 2, length: 3, height: 1)
-let b = Crate(width: 3, length: 2, height: 1)
-let c = Crate(width: 3, length: 2, height: 2)
-
-// 1 of these should be true
+// only 1 of these should be true
 a==b
 a<b
 b<a
@@ -20,9 +21,4 @@ b<a
 !(a < a)
 a < b ? !(b < a) : true
 (a < b && b < c) ? a < c : true
-
-// should preferably be different
-Crate(width: 2, length: 4, height: 3).hashValue
-Crate(width: 4, length: 2, height: 3).hashValue
-
 //: [Next](@next)

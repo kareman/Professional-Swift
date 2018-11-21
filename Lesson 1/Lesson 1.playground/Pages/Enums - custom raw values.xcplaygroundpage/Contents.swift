@@ -32,6 +32,10 @@ enum TestResult: RawRepresentable {
 	}
 }
 
-let l = TestResult(rawValue: (reality: false, test: true))
-l?.rawValue
+let t1 = TestResult(rawValue: (reality: false, test: true))
+t1?.rawValue
+let t2 = TestResult(rawValue: (reality: true, test: false))
+t1 == t2
+t1?.hashValue
+t2?.hashValue
 //: [Next](@next)

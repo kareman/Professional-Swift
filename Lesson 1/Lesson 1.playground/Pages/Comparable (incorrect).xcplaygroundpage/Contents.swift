@@ -4,11 +4,6 @@ struct Crate: Equatable {
 	var volume: Float {
 		return width * length * height
 	}
-	static func ==(lhs: Crate, rhs: Crate) -> Bool {
-		return lhs.width == rhs.width
-			&& lhs.length == rhs.length
-			&& lhs.height == rhs.height
-	}
 }
 
 extension Crate: Comparable {
@@ -21,7 +16,7 @@ let a = Crate(width: 2, length: 3, height: 1)
 let b = Crate(width: 3, length: 2, height: 1)
 let c = Crate(width: 3, length: 2, height: 2)
 
-// 1 of these should be true
+// only 1 of these should be true
 a==b
 a<b
 b<a

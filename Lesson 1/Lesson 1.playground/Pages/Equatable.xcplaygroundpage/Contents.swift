@@ -5,11 +5,8 @@ struct Crate: Equatable {
 	var volume: Float {
 		return width * length * height
 	}
-	static func ==(lhs: Crate, rhs: Crate) -> Bool {
-		return lhs.width == rhs.width
-			&& lhs.length == rhs.length
-			&& lhs.height == rhs.height
-	}
 }
 
+Crate(width: 1, length: 2, height: 3) == Crate(width: 1, length: 2, height: 3)
+Crate(width: 1, length: 2, height: 3) == Crate(width: 2, length: 2, height: 2)
 //: [Next](@next)
